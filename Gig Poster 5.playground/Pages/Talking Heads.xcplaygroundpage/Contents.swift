@@ -18,7 +18,7 @@ import PlaygroundSupport
  * iteration (use of loops to repeat statements)
  * arrays (a data structure that stores related pieces of information)
  * use of arithmetic operators in expressions
-
+ 
  You may use the color constants created below to obtain the correct colors.
  
  Remember that you can refer to the [Canvas class documentation](https://www.russellgordon.ca/canvasgraphics/documentation/classes/canvas), as needed.
@@ -26,9 +26,9 @@ import PlaygroundSupport
  ## Use Source Control
  
  To create evidence that supports your case for exceeding expectations for thread 3:
-
+ 
  * You *must* commit and push regularly ... *not* just at the end of this task.
-
+ 
  * You *must* complete your work prior to 3:30 PM on Wednesday, February 12, 2020.
  
  Good luck! You've got this! 👊🏻👊🏼👊🏽👊🏾👊🏿
@@ -89,22 +89,41 @@ for x in stride(from: 0, through: 400-(44.44), by: 44.44){
         triangleVertices.append(Point(x: Double(x), y: y))
         triangleVertices.append(Point(x: Double(x), y: y+(400/9)))
         triangleVertices.append(Point(x: Double(x+(400/9)), y: y+(400/9)))
-       
+        
         
         canvas.drawCustomShape(with: triangleVertices)
         
     }
 }
+
+canvas.textColor = offWhite
+canvas.drawText(message: "talking heads", at: Point(x: 25, y: 140), size: 35, kerning: 0.0)
+
+var text:[String] = ["friday, saturday, sunday","at cbgb and emfug", "also appearing:", "september 12, 13, 14", "315 bowery, new york city", "from brooklyn, the shirts"]
+
+var number = 0
+
+for y in stride(from: 30, through: 15, by: -15){
+    
+    for x in stride(from: 20, through: 280, by: 130){
+        canvas.drawText(message: text[number], at: Point(x: x, y: y), size: 8, kerning: 0.0)
+        
+        number += 1
+    }
+}
+
+
+
 /*:
  ## Use Source Control
  
  To create evidence that supports your case for exceeding expectations for thread 3:
-
+ 
  * You *must* commit and push regularly ... *not* just at the end of this task.
-
+ 
  * You *must* complete your work prior to 3:30 PM on Wednesday, February 12, 2020.
-
-
+ 
+ 
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
