@@ -49,21 +49,33 @@ let brightYellow = Color(hue: 46, saturation: 71, brightness: 98, alpha: 100)
 canvas.fillColor = deepOrange
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
-
-//canvas.fillColor = offWhite
-//
-//var whiteVertices: [Point] = []
-//       whiteVertices.append(Point(x: Double(x), y: y))
-//       whiteVertices.append(Point(x: Double(x), y: y+(400/9)))
-//       whiteVertices.append(Point(x: Double(x+(400/9)), y: y+(400/9)))
-//
-//        canvas.drawCustomShape(with: whiteVertices)
-
-// Draw triangles
-
-canvas.fillColor = deepOrange
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = false
+
+// Make a white triangle base
+canvas.fillColor = offWhite
+
+var whiteVertices: [Point] = []
+whiteVertices.append(Point(x: 0, y: 200))
+whiteVertices.append(Point(x: 0, y: 600))
+whiteVertices.append(Point(x: 400, y: 600))
+
+canvas.drawCustomShape(with: whiteVertices)
+
+
+// Make a yellow triangle base
+canvas.fillColor = brightYellow
+
+var yellowVertices: [Point] = []
+yellowVertices.append(Point(x: 0, y: 200))
+yellowVertices.append(Point(x: 400, y: 600))
+yellowVertices.append(Point(x: 400, y: 200))
+
+canvas.drawCustomShape(with: yellowVertices)
+
+// Draw orange triangles
+
+canvas.fillColor = deepOrange
 
 // Stride for x coordinates
 for x in stride(from: 0, through: 400-(44.44), by: 44.44){
